@@ -8,9 +8,9 @@
 import boto3
 from boto3.session import Session
 import os
-aws_key = "AKIAPFXGGUWA2WMEHSOQ"#手动调整
-aws_secret = "msfUuU0uei/h5HA2ANlQe46U3skuW9yFBSodqKjI"#手动调整
-Bucket='lqdzj-image'#手动调整
+aws_key = ""#手动调整
+aws_secret = ""#手动调整
+Bucket=''#手动调整
 def call_back(c):
     global yes_or_no
     yes_or_no = c
