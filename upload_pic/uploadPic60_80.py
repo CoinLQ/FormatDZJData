@@ -3,8 +3,8 @@
 import boto3
 from boto3.session import Session
 import os
-aws_key = "AKIAPFXGGUWA2WMEHSOQ"
-aws_secret = "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"
+aws_key = ""
+aws_secret = ""
 def call_back(c):
     global yes_or_no
     yes_or_no = c
