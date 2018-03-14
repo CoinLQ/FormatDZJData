@@ -3,8 +3,10 @@
 import boto3
 from boto3.session import Session
 import os
-aws_key = ""
-aws_secret = ""
+data=open('/home/xian/桌面/aws')
+aws_key = data.readline()
+aws_secret = data.readline()
+Bucket=data.readline()
 def call_back(c):
     global yes_or_no
     yes_or_no = c
@@ -26,9 +28,9 @@ def uploadPicFile(img_path):
     if number > 0:
         key = "QS/" + keyList[length-2] +"/" +keyList[length-1]
         try:
-            s3.client.get_object_acl(Bucket='lqdzj-image', Key=key)
+            s3.client.get_object_acl(Bucket=Bucket, Key=key)
         except Exception as e:
-            s3.meta.client.upload_file(img_path, 'lqdzj-image', Key=key, Callback=call_back)
+            s3.meta.client.upload_file(img_path, Bucket, Key=key, Callback=call_back)
     else:
         print('upload pic error!')
     
