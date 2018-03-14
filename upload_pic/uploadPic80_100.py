@@ -34,7 +34,7 @@ def uploadPicFile(img_path):
     else:
         print('upload pic error!')
     
-        
+         
 
 #********************E、遍历文件夹功能************************************
 #遍历文件夹，获取所有文件路径
