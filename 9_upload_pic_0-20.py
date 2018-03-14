@@ -8,9 +8,10 @@
 import boto3
 from boto3.session import Session
 import os
-aws_key = ""#手动调整
-aws_secret = ""#手动调整
-Bucket=''#手动调整
+data=open('/home/xian/桌面/aws')
+aws_key = data.readline()
+aws_secret = data.readline()
+Bucket=data.readline()
 def call_back(c):
     global yes_or_no
     yes_or_no = c
