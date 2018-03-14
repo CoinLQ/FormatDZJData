@@ -6,7 +6,7 @@ import os
 data=open('/home/xian/桌面/aws')
 aws_key = data.readline()
 aws_secret = data.readline()
-Bucket = data.readline()
+Bucket = data.readline() 
 def call_back(c):
     global yes_or_no
     yes_or_no = c
